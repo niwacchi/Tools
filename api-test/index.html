@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
+    <title>API TEST Tool</title>
 </head>
 <body>
-    <form action="get-api-response" method="post">
-        <input type="text" id="url" name="url" width="30px">
-        <input type="submit" id="get" name="get" value="get">
-    </form>
     <div>
-        {{ response or "" }}
+        API TEST Tool
+    </div> 
+    <div>
+        <div>GET API</div>
+        <div>
+            <form action="get-api-response" method="post">
+                URL:<input type="text" id="url" name="url" width="30px">
+                <input type="submit" id="get" name="get" value="get">
+            </form>
+        </div>
     </div>
+    <div>
+        <div>POST API</div>
+        <div>
+            <form action="post-api-response" method="post">
+                URL:<input type="text" id="url" name="url" width="30px">
+                <input type="submit" id="get" name="post" value="post">
+            </form>
+        </div>
+    </div>
+    <div>
+        <div>RESULT</div>
+        <div>
+            <pre class="js-result-json">{{ response }}</pre>
+        </div>
+    </div>
+    <script>
+        // let result = {{! response or "" }}!;
+        // area = document.querySelector('.js-result-json');
+        // area.appendChild(document.createTextNode(JSON.stringify(result, null, 4)));
+    </script>
 </body>
 </html>
