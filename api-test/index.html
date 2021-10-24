@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+</head>
+<body>
+    <form action="get-api-response" method="post">
+        <input type="text" id="url" name="url" width="30px">
+        <input type="submit" id="get" name="get" value="get">
+    </form>
+    <div>
+        {{ response or "" }}
+    </div>
+</body>
+</html>
